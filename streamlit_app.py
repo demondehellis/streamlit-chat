@@ -11,7 +11,7 @@ def chat_input():
     })
 
     response = openai.ChatCompletion.create(
-        model=os.environ.get("OPENAI_MODEL") or "gpt-4",
+        model="gpt-4",
         max_tokens=os.environ.get("OPENAI_MAX_TOKENS") or 1000,
         messages=st.session_state.messages,
     )
